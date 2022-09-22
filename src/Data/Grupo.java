@@ -71,6 +71,16 @@ this.cursosdictados = cursosdictados;
 this.esAsistentes = esAsistentes;
 this.notasF = notasF;
 }
+public Grupo(long numero, String[] semana, String[] horas, String semestre, Curso curso, Profesor cursosdictados ) {
+this.numero = numero;
+this.semana = semana;
+this.horas = horas;
+this.semestre = semestre;
+this.curso = curso;
+this.cursosdictados = cursosdictados;
+this.esAsistentes = null;
+this.notasF = null;
+}
 
 @Override
 public String toString() {
