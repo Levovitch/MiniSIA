@@ -22,6 +22,10 @@ public Calificacion(Estudiante estudiante, double nota) {
         this.estudiante = estudiante;
         this.nota = nota;
 }
+public Calificacion(Estudiante estudiante) {
+        this.estudiante = estudiante;
+        this.nota = null;
+}
     
 @Override
 public String toString() {
