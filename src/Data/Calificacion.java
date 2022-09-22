@@ -18,6 +18,7 @@ public Double getNota(){
 public void setNota(Double setNota){
     this.nota = setNota;
 }
+//HOLA COMO ESTÁn
 public Calificacion(Estudiante estudiante, double nota) {
         this.estudiante = estudiante;
         this.nota = nota;
