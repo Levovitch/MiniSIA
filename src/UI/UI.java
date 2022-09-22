@@ -13,10 +13,12 @@ public class UI {
     }   
     public static int leerOpcion(){
         Scanner lector = new Scanner(System.in);
-        int opcion = lector.nextInt();
+        int opcion = lector.nextInt();  
         return opcion;
     }
-    
+
+    //CALIFICACIÓN 
+
     public static void MenuCalificaciones(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
         System.out.println("LISTA DE ESTUDIANTES ");
         System.out.println("1. " + estudiante1.getNombre() + estudiante1.getApellido() + "\n2. " + 
@@ -33,7 +35,8 @@ public class UI {
         Calificacion calificacionT = new Calificacion(calificacion[1].getEstudiante(), calificacionP);
         
         return calificacionT;
-        
     }
+
+    //
     
 }
