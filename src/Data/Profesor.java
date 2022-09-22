@@ -64,6 +64,15 @@ public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento, E
    this.gruposquedicta = gruposquedicta;
    this.salario = salario;
     }
+public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento) {
+   this.ID = ID;
+   this.nombre = nombre;
+   this.apellido = apellido;
+   this.fechaNacimiento = fechaNacimiento;
+   this.nombreTutoreado = null;
+   this.gruposquedicta = null;
+   this.salario = null;
+    }
 
     @Override
 public String toString() {
