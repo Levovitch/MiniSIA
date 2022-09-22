@@ -30,9 +30,14 @@ public void setnota(Double nota){
     this.nota=nota;
 }
 public CalificacionDocente(Estudiante eCalificador, Profesor pCalificado, Double nota) {
-this.eCalificador = eCalificador;
-this.pCalificado = pCalificado;
-this.nota = nota;
+    this.eCalificador = eCalificador;
+    this.pCalificado = pCalificado;
+    this.nota = nota;
+    }
+public CalificacionDocente(Profesor pCalificado, Double nota) {
+    this.eCalificador = null;
+    this.pCalificado = pCalificado;
+    this.nota = nota;
     }
 
 @Override
