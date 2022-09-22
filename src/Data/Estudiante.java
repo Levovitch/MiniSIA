@@ -95,6 +95,20 @@ public void setNombre(CalificacionDocente evdocente){
         this.recibopago = recibopago;
         this.evDocente = evDocente;
     }
+ public Estudiante(Long ID, String nombre, String apellido, double PAPA, Date fechaNacimiento) {
+        this.ID = ID;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.PAPA = PAPA;
+        this.fechaNacimiento = fechaNacimiento;
+        this.nombreTutor = null;
+        this.asistente = null;
+        this.materias = null;
+        this.nota = null;
+        this.recibopago = null;
+        this.evDocente = null;
+    }
+
 
 @Override
 public String toString() {
