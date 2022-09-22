@@ -16,7 +16,7 @@ private List<Curso> materias;
 private List<Calificacion> nota;
 private Finanzas recibopago;
 private CalificacionDocente evDocente;
-
+//xd 
  
 public String getNombre(){
     return this.nombre;
