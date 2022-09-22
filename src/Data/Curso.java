@@ -31,11 +31,15 @@ public void setcreditos (byte creditos){
 }
 
 public Curso(int numero, String nombre, byte creditos) {
-this.numero = numero;
-this.nombre = nombre;
-this.creditos = creditos;
+    this.numero = numero;
+    this.nombre = nombre;
+    this.creditos = creditos;
 }
-
+public Curso(int numero, byte creditos) {
+    this.numero = numero;
+    this.nombre = null;
+    this.creditos = creditos;
+}
 @Override
 public String toString() {
 return "CURSO: /n " + "/n Numero = " + numero + "/n Nombre = " + nombre + "/n Creditos = " + creditos + '}';
