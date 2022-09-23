@@ -1,3 +1,4 @@
+
 package Data;
 
 
@@ -26,6 +27,6 @@ public CalificacionDocente(Estudiante eCalificador, Double nota) {
 
 @Override
 public String toString() {
-    return "CALIFICACIÓN DOCENTE: /n" + "/n Estudiante Calificador = " + eCalificador + "/n Nota = " + nota;
+    return "CALIFICACIÓN DOCENTE: /n" + "/n Estudiante Calificador = " + this.getEcalificador() + "/n Nota = " + this.getnota();
     }
 }

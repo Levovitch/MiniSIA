@@ -5,7 +5,7 @@ package Data;
 public class Curso {
     private int numero;
     private String nombre;
-    private byte creditos;
+    private int creditos;
     
 public int getnumero(){
     return this.numero;
@@ -23,26 +23,26 @@ public void setnombre(String nombre){
     this.nombre=nombre;
 }
 
-public byte getcreditos(){
+public int getcreditos(){
     return this.creditos;
 }
-public void setcreditos (byte creditos){
-    this.creditos=creditos;
+public void setcreditos (int creditos){
+    this.creditos = creditos;
 }
 
-public Curso(int numero, String nombre, byte creditos) {
+public Curso(int numero, String nombre, int creditos) {
     this.numero = numero;
     this.nombre = nombre;
     this.creditos = creditos;
 }
-public Curso(int numero, byte creditos) {
+public Curso(int numero, int creditos) {
     this.numero = numero;
     this.nombre = null;
     this.creditos = creditos;
 }
 @Override
 public String toString() {
-return "CURSO: /n " + "/n Numero = " + numero + "/n Nombre = " + nombre + "/n Creditos = " + creditos + '}';
+return "CURSO: /n " + "/n Numero = " + this.getnumero() + "/n Nombre = " + this.getnombre() + "/n Creditos = " + this.getcreditos();
 }
 
 

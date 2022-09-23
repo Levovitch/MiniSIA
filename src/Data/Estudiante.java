@@ -89,12 +89,11 @@ public void setrecibopago(Finanzas getrecibopago){
         this.nota = nota;
         this.recibopago = recibopago;
     }
- public Estudiante(Long ID, String nombre, String apellido, double PAPA) {
+ public Estudiante(Long ID, String nombre, String apellido, Date fechaNacimiento) {
         this.ID = ID;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.PAPA = PAPA;
-        this.fechaNacimiento = null;
+        this.fechaNacimiento = fechaNacimiento;
         this.nombreTutor = null;
         this.asistente = null;
         this.materias = null;
@@ -103,6 +102,6 @@ public void setrecibopago(Finanzas getrecibopago){
     }
 @Override
 public String toString() {
-        return "ESTUDIANTE:/n" + "ID = " + ID + "/n Nombre = " + nombre + "/n Apellido = " + apellido + "/n PAPA = " + PAPA + "/n Fecha de Nacimiento = " + fechaNacimiento + "/n Nombre Tutor = " + nombreTutor + "/n Asistente = " + asistente + "/n Materias = " + materias + "/n Nota = " + nota + "/n Recibo de pago = " + recibopago + '}';
+        return "ESTUDIANTE:/n" + "ID = " + this.getID() + "/n Nombre = " + this.getNombre() + "/n Apellido = " + this.getApellido() + "/n PAPA = " + this.getPAPA() + "/n Fecha de Nacimiento = " + this.getFechaNacimiento() + "/n Nombre Tutor = " + this.getNombretutor() + "/n Asistente = " + this.getAsistente() + "/n Materias = " + this.getMaterias() + "/n Nota = " + this.getNota() + "/n Recibo de pago = " + this.getrecibopago();
     }
 }

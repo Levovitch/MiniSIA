@@ -24,18 +24,11 @@ public Finanzas(long recibos, long pagos) {
 this.recibos = recibos;
 this.pagos = pagos;
 }
-public Finanzas(long recibos) {
-    this.recibos = recibos;
-    this.pagos = null;
-}
-public Finanzas(long pagos) {
-    this.recibos = null;
-    this.pagos = pagos;
-}
 
 @Override
 public String toString() {
-return "FINANZAS:/n " + "/n Recibos=" + recibos + "/n Pagos=" + pagos + '}';
+return "FINANZAS:/n " + "/n Recibos=" + this.getRecibos() + "/n Pagos=" + this.getPagos();
 }
 
 }
+

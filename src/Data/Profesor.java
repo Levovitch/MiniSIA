@@ -85,8 +85,10 @@ public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento) {
 
     @Override
     public String toString() {
-        return "Profesor" + "\nID =" + ID + "\nNombre = " + nombre + "\nApellido = " + apellido + "\nFechaNacimiento = " + fechaNacimiento + "\nNombreTutoreado = " + nombreTutoreado + "\nGruposquedicta = " + gruposquedicta + "\nSalario = " + salario + "\nCalificacion = " + calificacion;
+        return "Profesor" + "\nID =" + this.getID() + "\nNombre = " + this.getNombre() + "\nApellido = " + this.getApellido() + "\nFechaNacimiento = " + this.getFechaDeNacimiento() + "\nNombreTutoreado = " + this.getEstudiantes() + "\nGruposquedicta = " + this.getGruposQueDicta() + "\nSalario = " + this.getSalario() + "\nCalificacion = " + this.getCalificacion();
     }
+
+
 
  }
 

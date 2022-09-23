@@ -5,14 +5,44 @@ import Data.*;
 import UI.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 public class Main {
     
     public static void main(String[] args) {
-        Estudiante carlos = new Estudiante(101497238l, "Carlos", "García");
-        Estudiante david = new Estudiante(102634582l, "David", "Díaz");
-        Estudiante sofia = new Estudiante(1016345612l, "Sofía", "Jiménez");
+        //Fechas de Nacimiento
+        Date carlosFN = new Date(13, 04, 2001);
+        Date davidFN = new Date(1, 03, 2004);
+        Date sofiaFN = new Date(26, 06, 2003);
+        Date LigiaFN = new Date(2, 12, 1967);
+        Date SandraFN = new Date(7, 11, 1989);
+        Date MauricioFN = new Date(17, 01, 1981);
+        //CURSOS
+        Curso calculoDif = new Curso(1000009, "Cálculo Diferencial", 4);
+        Curso algebraLin = new Curso(1000003, "Álgebra Lineal", 4);
+        Curso calculoInt = new Curso(1000003, "Calculko Integral", 4);
+        //ESTUDIANTES
+        Estudiante carlos = new Estudiante(101497238l, "Carlos", "García", carlosFN);
+        Estudiante david = new Estudiante(102634582l, "David", "Díaz", davidFN);
+        Estudiante sofia = new Estudiante(1016345612l, "Sofía", "Jiménez", sofiaFN);
+        //PROFESORES
+        Profesor Ligia = new Profesor(274567312l, "Ligia", "Torres", LigiaFN);
+        Profesor Sandra = new Profesor(43569766l, "Sandra", "Montoya", SandraFN);
+        Profesor Mauricio = new Profesor(34126340l, "Mauricio", "Oviedo", MauricioFN);
+        //GRUPOS
+        List<Estudiante> estudiantesCD = new ArrayList<>();
+        estudiantesCD.add(david);
+        List<Estudiante> estudiantesAL = new ArrayList<>();
+        estudiantesAL.add(sofia);
+        estudiantesAL.add(carlos);
+        List<Estudiante> estudiantesCI = new ArrayList<>();
+        estudiantesCI.add(sofia);
+        estudiantesCI.add(carlos);
         
+        Grupo grupoCD = new Grupo(1, "Semana 16", "4", "2022-2", calculoDif, Ligia, estudiantesCD);
+        Grupo grupoAL = new Grupo(1, "Semana 16", "4", "2022-2", algebraLin, Sandra, estudiantesAL);
+        Grupo grupoCI = new Grupo(1, "Semana 16", "4", "2022-2", calculoInt, Mauricio, estudiantesCI);
+        //CALIFICACIONES
         Calificacion cal1c = new Calificacion(carlos, 4.1);
         Calificacion cal2c = new Calificacion(carlos, 4.3);
         Calificacion cal3c = new Calificacion(carlos, 4.5);
@@ -39,7 +69,27 @@ public class Main {
          ID.add(david.getID());
          ID.add(sofia.getID());
         
-         
+         //ESTUDIANTES (COMPLETAR INFORMACIÓN)
+         //Carlos
+        Finanzas reciboC = new Finanzas(345672l, 0);
+        UI.completarInfoEstudiantes(carlos, Mauricio, UI.listaGrupos(grupoCI, grupoAL), UI.listaCurso(calculoInt, algebraLin), reciboC);
+        //David
+        Finanzas reciboD = new Finanzas(3560678l, 0);
+        UI.completarInfoEstudiantes(david, Sandra, UI.listaGrupos(grupoCD), UI.listaCurso(calculoDif), reciboD);
+        //Sofia
+        Finanzas reciboS = new Finanzas(1547890, 0);
+        UI.completarInfoEstudiantes(sofia, Ligia, UI.listaGrupos(grupoCI, grupoAL), UI.listaCurso(calculoInt, algebraLin), reciboS);
+        //PROFESORES (COMPLETAR INFORMACIÓN)
+        //Ligia
+        Finanzas reciboL = new Finanzas(0, 3400000l);
+        UI.completarInfoProfesores(Ligia, sofia, grupoCD, reciboL);
+        //Sandra
+        Finanzas reciboSA = new Finanzas(0, 3400000l);
+        UI.completarInfoProfesores(Sandra, david, grupoAL, reciboSA);
+        //Mauricio
+        Finanzas reciboM = new Finanzas(0, 3400000l);
+        UI.completarInfoProfesores(Mauricio, carlos, grupoCI, reciboM);   
+        //MAIN
         UI.imprimirBienvenida();
         UI.imprimirMenu();
         int opcion = UI.leerOpcion();
@@ -63,14 +113,14 @@ public class Main {
                 System.out.println("Digite su ID: ");
                 long usuario = UI.leerOpcionL();
                 while (true){
-                    if(usuario == 101497238l){
-                        UI.login(carlos, ID, usuario);
+                    if(usuario == 101497238){
+                        UI.login(carlos, carlos.getAsistente());
                         break;
                     }else if(usuario == 102634582l){
-                        UI.login(david, ID, usuario);
+                        UI.login(david, david.getAsistente());
                         break;
                     }else if(usuario == 1016345612l){
-                        UI.login(sofia, ID, usuario);
+                        UI.login(sofia, sofia.getAsistente());
                         break;
                     }else{
                         while(ID.contains(usuario) == false){
@@ -80,6 +130,6 @@ public class Main {
                     }
                 }
                 break;   
-        }
+        } 
     }
 }

@@ -1,6 +1,4 @@
 
-package Data;
-
 public class Calificacion {
     private Estudiante estudiante;
     private double nota;
@@ -22,13 +20,11 @@ public Calificacion(Estudiante estudiante, double nota) {
         this.estudiante = estudiante;
         this.nota = nota;
 }
-public Calificacion(Estudiante estudiante) {
-        this.estudiante = estudiante;
-        this.nota = null;
-}
     
 @Override
 public String toString() {
-return "" + nota;
+    return "Estudiante = " + this.getEstudiante() + "\nNota = " + getNota();
     }
+
+
 }
