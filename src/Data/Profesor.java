@@ -12,6 +12,7 @@ private Date fechaNacimiento;
 private Estudiante nombreTutoreado;
 private Grupo gruposquedicta;
 private Finanzas salario;
+private CalificacionDocente calificacion; 
  
 public String getNombre(){
     return this.nombre;
@@ -55,7 +56,14 @@ public Finanzas getSalario(){
 public void setSalario(Finanzas setSalario){
     this.salario = setSalario;
 }
-public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento, Estudiante nombreTutoreado, Grupo gruposquedicta, Finanzas salario) {
+public CalificacionDocente getCalificacion() {
+    return calificacion;
+    }
+public void setCalificacion(CalificacionDocente calificacion) {
+    this.calificacion = calificacion;
+    }
+
+public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento, Estudiante nombreTutoreado, Grupo gruposquedicta, Finanzas salario, CalificacionDocente calificacion) {
    this.ID = ID;
    this.nombre = nombre;
    this.apellido = apellido;
@@ -63,6 +71,7 @@ public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento, E
    this.nombreTutoreado = nombreTutoreado;
    this.gruposquedicta = gruposquedicta;
    this.salario = salario;
+   this.calificacion = calificacion;
     }
 public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento) {
    this.ID = ID;
@@ -75,8 +84,9 @@ public Profesor(Long ID, String nombre, String apellido, Date fechaNacimiento) {
     }
 
     @Override
-public String toString() {
-        return "PROFESOR:/n" + "ID = " + ID + "/n Nombre = " + nombre + "/n Apellido = " + apellido + "/n Fecha de Nacimiento = " + fechaNacimiento + "/n Nombre Tutoreado = " + nombreTutoreado +  "/n Grupos  = " + gruposquedicta + "/n Salario = " + salario +'}';
+    public String toString() {
+        return "Profesor" + "\nID =" + ID + "\nNombre = " + nombre + "\nApellido = " + apellido + "\nFechaNacimiento = " + fechaNacimiento + "\nNombreTutoreado = " + nombreTutoreado + "\nGruposquedicta = " + gruposquedicta + "\nSalario = " + salario + "\nCalificacion = " + calificacion;
     }
 
-}
+ }
+

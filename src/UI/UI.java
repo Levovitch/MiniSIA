@@ -16,6 +16,16 @@ public class UI {
         int opcion = lector.nextInt();  
         return opcion;
     }
+    public static long leerOpcionL(){
+        Scanner lector = new Scanner(System.in);
+        long opcion = lector.nextLong();
+        return opcion;
+    }
+    public static Double leerOpcionD(){
+        Scanner lector = new Scanner(System.in);
+        double opcion = lector.nextDouble();
+        return opcion;
+    }
     //ESTUDIANTES
     public static void MenuEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
         System.out.println("LISTA DE ESTUDIANTES ");
@@ -96,6 +106,20 @@ public class UI {
         System.out.println(string);
         }
 
-    //
+    //EVALUACIÓN DOCENTE
+    public static void login(Estudiante estudiante1, List<Long> ID, long usuario){
+        String string = "";
+        List<Grupo> grupos = new ArrayList<>();
+        grupos = estudiante1.getAsistente();
+        for(int i = 0; i <= grupos.size()-1; i++){
+            string = (i+1) + ". "+ grupos.get(i).getProfesor() + "\n";   
+       }
+        System.out.println("Seleccione el profesor que desea: ");
+        int opcionP = UI.leerOpcion();
+        System.out.println("Digite la note correspondiente: ");
+        Double opcionCP = UI.leerOpcionD();
+        CalificacionDocente calD = new CalificacionDocente(estudiante1, opcionCP);
+        grupos.get(opcionP).getProfesor().setCalificacion(calD);
+      } 
     
 }

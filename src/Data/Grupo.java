@@ -33,31 +33,31 @@ public void sethoras(String[] horas){
 public String getsemestre(){
     return this.semestre;
 }
-public void setNombre(String semestre){
+public void setSemestre(String semestre){
     this.semestre=semestre;
 }
 public Curso getmateria(){
     return this.curso;
 }
-public void setNombre(Curso materia){
+public void setMateria(Curso materia){
     this.curso = materia;
 }
-public Profesor getcursosdictados(){
+public Profesor getProfesor(){
     return this.cursosdictados;
 }
-public void setNombre(Profesor cursosdictados){
-    this.cursosdictados=cursosdictados;
+public void setProfesor(Profesor cursosdictados){
+    this.cursosdictados = cursosdictados;
 }
 public List<Estudiante> getEasistentes(){
     return this.esAsistentes;
 }
-public void setNombre(List<Estudiante> Easistentes){
+public void setEasistentes(List<Estudiante> Easistentes){
     this.esAsistentes=Easistentes;
 }
-public List<Calificacion> getNombre(){
+public List<Calificacion> getCalificacion(){
     return this.notasF;
 }
-public void setnotasF(List<Calificacion> notasF){
+public void setCalificacion(List<Calificacion> notasF){
     this.notasF=notasF;
 }
 
