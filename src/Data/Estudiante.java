@@ -95,7 +95,7 @@ public void setNombre(CalificacionDocente evdocente){
         this.recibopago = recibopago;
         this.evDocente = evDocente;
     }
- public Estudiante(Long ID, String nombre, String apellido, double PAPA, Date fechaNacimiento) {
+ public Estudiante(Long ID, String nombre, String apellido, double PAPA) {
         this.ID = ID;
         this.nombre = nombre;
         this.apellido = apellido;

@@ -60,24 +60,42 @@ public class UI {
     }
     //CALIFICACIÓN 
 
-    public static void MenuCalificaciones(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
-        System.out.println("LISTA DE ESTUDIANTES ");
-        System.out.println("1. " + estudiante1.getNombre() + estudiante1.getApellido() + "\n2. " + 
-                estudiante2.getNombre() +  estudiante2.getApellido() +  
-                "\n3. " + estudiante3.getNombre() + estudiante3.getApellido() + "\nSeleccione el número del estudiante: ");
+    public static void menuCalificaciones(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
+        System.out.println("------ LISTA DE ESTUDIANTES ------ ");
+        System.out.print("1. " + estudiante1.getNombre() + " " + estudiante1.getApellido() + "\n2. " + 
+                estudiante2.getNombre() + " " +  estudiante2.getApellido() +  
+                "\n3. " + estudiante3.getNombre() + " " + estudiante3.getApellido() + "\nSeleccione el número del estudiante: ");
     }
-    public static Calificacion Calificaciones(Calificacion[] calificacion){
+    
+    public static List<Calificacion> anadirCalificaciones(Calificacion cal1, Calificacion cal2, Calificacion cal3){
+        List<Calificacion> Calificaciones = new ArrayList<Calificacion>();
+        Calificaciones.add(cal1);
+        Calificaciones.add(cal2);
+        Calificaciones.add(cal3);
+        
+        return Calificaciones;
+    }
+    
+    public static void promediarYAsignarCalificaciones(List<Calificacion> calificacion, Estudiante estudiante1){
         double calificacionP = 0; 
-        for(int i = 0; i <= calificacion.length-1; i++){
-           calificacionP = calificacionP + calificacion[i].getNota();
+        for(int i = 0; i <= calificacion.size()-1; i++){
+           calificacionP = calificacionP + calificacion.get(i).getNota();
     }
-        calificacionP = calificacionP / calificacion.length;
+        calificacionP = calificacionP / calificacion.size();
         
-        Calificacion calificacionT = new Calificacion(calificacion[1].getEstudiante(), calificacionP);
-        
-        return calificacionT;
+        Calificacion calificacionT = new Calificacion(calificacion.get(1).getEstudiante(), calificacionP);  
+        estudiante1.setPAPA(calificacionT.getNota());
     }
+    public static void mostrarCalificaciones(Estudiante estudiante1, List<Calificacion> calificaciones){
+        String string = "";
+        System.out.print("1. " + estudiante1.getNombre() + " " +  estudiante1.getApellido() + " \nPromedio PAPA: " + String.format("%.2f", nestudiante1.getPAPA()) + "\nCalificaciones: ");
+       
+        for(int i = 0; i <= calificaciones.size()-1; i++){
+           string += calificaciones.get(i) + " ";
+        }
+        System.out.println(string);
+        }
 
-    //petes todos
+    //
     
 }

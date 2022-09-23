@@ -29,8 +29,6 @@ public Calificacion(Estudiante estudiante) {
     
 @Override
 public String toString() {
-return "CALIFICACIÓN: /n" + "/n Estudiante=" + estudiante + "/n Nota=" + nota + '}';
+return "" + nota;
     }
-
-
 }
