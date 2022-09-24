@@ -28,6 +28,46 @@ public class UI {
         double opcion = lector.nextDouble();
         return opcion;
     }
+    //ESTUDIANTE
+    public static void MenuEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
+        System.out.println("LISTA DE ESTUDIANTES ");
+        System.out.println("1. " + estudiante1.getNombre() + estudiante1.getApellido() + "\n 2. " + 
+                estudiante2.getNombre() +  estudiante2.getApellido() +  
+                "\n 3. " + estudiante3.getNombre() + estudiante3.getApellido() + "\nSeleccione el número del estudiante: ");
+    }
+    
+    public static void imprimirEstudiante1(Estudiante estudiante1){
+        System.out.println(estudiante1);
+    }
+    public static void imprimirEstudiante2(Estudiante estudiante2){
+        System.out.println(estudiante2);
+    }
+    public static void imprimirEstudiante3(Estudiante estudiante3){
+        System.out.println(estudiante3);
+    }
+    public static void imprimirError2(){
+        System.out.println("Opcion no valida");
+    }
+    //PROFESOR
+     public static void MenuProfesores(Profesor profesor1, Profesor profesor2, Profesor profesor3){
+        System.out.println("LISTA DE PROFESORES ");
+        System.out.println("1. " + profesor1.getNombre() + profesor1.getApellido() + "\n2. " + 
+                profesor2.getNombre() +  profesor2.getApellido() +  
+                "\n3. " + profesor3.getNombre() + profesor3.getApellido() + "\nSeleccione el número del profesor: ");
+    }
+   
+    public static void imprimirProfesor1(Profesor profesor1){
+        System.out.println(profesor1);
+    }
+    public static void imprimirProfesor2(Profesor profesor2){
+        System.out.println(profesor2);
+    }
+    public static void imprimirProfesor3(Profesor profesor3){
+        System.out.println(profesor3);
+    }
+     public static void imprimirError3(){
+        System.out.println("Opcion no valida");
+    }
     //CALIFICACIÓN
     
     public static void menuCalificaciones(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
