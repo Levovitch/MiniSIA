@@ -94,6 +94,35 @@ public class Main {
         UI.imprimirMenu();
         int opcion = UI.leerOpcion();
         switch(opcion){
+            case 1:
+                MenuEstudiantes(carlos, david, sofia);
+                int opcion2=UI.leerOpcion();
+                switch(opcion2){
+                    case 1:
+                        UI.imprimirEstudiante1(carlos);
+                        break;
+                    case 2:
+                        UI.imprimirEstudiante2(david);
+                        break;
+                    case 3:
+                        UI.imprimirEstudiante3(sofia);
+                        break;
+                }
+            case 2:
+                MenuProfesores(Ligia,Sandra,Mauricio)
+                int opcion3= UI.leerOpcion();
+                switch(opcion3){
+                    case 1:
+                        UI.imprimirProfesor1(Ligia);
+                        break;
+                    case 2:
+                        UI.imprimirProfesor2(Sandra);
+                        break;
+                    case 3:
+                       UI.imprimirProfesor2(Mauricio);
+                        break;
+                }
+                    
             case 4: 
                 UI.menuCalificaciones(carlos, david, sofia);
                 int opcionE = UI.leerOpcion();
