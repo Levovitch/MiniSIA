@@ -95,7 +95,7 @@ public class Main {
         int opcion = UI.leerOpcion();
         switch(opcion){
             case 1:
-                MenuEstudiantes(carlos, david, sofia);
+                UI.MenuEstudiantes(carlos, david, sofia);
                 int opcion2=UI.leerOpcion();
                 switch(opcion2){
                     case 1:
@@ -109,7 +109,7 @@ public class Main {
                         break;
                 }
             case 2:
-                MenuProfesores(Ligia,Sandra,Mauricio)
+                UI.MenuProfesores(Ligia,Sandra,Mauricio)
                 int opcion3= UI.leerOpcion();
                 switch(opcion3){
                     case 1:
