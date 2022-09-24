@@ -107,6 +107,9 @@ public class Main {
                     case 3:
                         UI.imprimirEstudiante3(sofia);
                         break;
+                     default:
+                        UI.imprimirError2();
+                        break;
                 }
             case 2:
                 UI.MenuProfesores(Ligia,Sandra,Mauricio)
@@ -120,6 +123,9 @@ public class Main {
                         break;
                     case 3:
                        UI.imprimirProfesor2(Mauricio);
+                        break;
+                    default:
+                        UI.imprimirError3();
                         break;
                 }
                     
