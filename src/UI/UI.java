@@ -186,9 +186,6 @@ public class UI {
     public static void imprimirAsignatura1(Curso asignatura1){
         System.out.println(asignatura1);
     }
-    public static void imprimirGrupo(Grupo grupo){
-        System.out.println(grupo);
-    }
     public static void imprimirAsignatura2(Curso asignatura2){
         System.out.println(asignatura2);
     }
