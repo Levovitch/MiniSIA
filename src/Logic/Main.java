@@ -90,98 +90,114 @@ public class Main {
         Finanzas reciboM = new Finanzas(0, 3400000l);
         UI.completarInfoProfesores(Mauricio, carlos, grupoCI, reciboM);   
         //MAIN
-        UI.imprimirBienvenida();
-        UI.imprimirMenu();
-        int opcion = UI.leerOpcion();
-        switch(opcion){
-            case 1:
-                UI.MenuEstudiantes(carlos, david, sofia);
-                int opcion2=UI.leerOpcion();
-                switch(opcion2){
-                    case 1:
-                        UI.imprimirEstudiante1(carlos);
-                        break;
-                    case 2:
-                        UI.imprimirEstudiante2(david);
-                        break;
-                    case 3:
-                        UI.imprimirEstudiante3(sofia);
-                        break;
-                     default:
-                        UI.imprimirError2();
-                        break;
-                }
-            case 2:
-                UI.MenuProfesores(Ligia,Sandra,Mauricio);
-                int opcion3= UI.leerOpcion();
-                switch(opcion3){
-                    case 1:
-                        UI.imprimirProfesor1(Ligia);
-                        break;
-                    case 2:
-                        UI.imprimirProfesor2(Sandra);
-                        break;
-                    case 3:
-                       UI.imprimirProfesor2(Mauricio);
-                        break;
-                    default:
-                        UI.imprimirError3();
-                        break;
-                }
-            case 3:
-                UI.MenuAsignaturas(calculoDif,algebraLin,calculoInt);
-                int opcion4= UI.leerOpcion();
-                switch(opcion4){
-                    case 1:
-                        UI.imprimirAsignatura1(calculoDif);
-                        break;
-                    case 2:
-                        UI.imprimirAsignatura2(algebraLin);
-                        break;
-                    case 3:
-                        UI.imprimirAsignatura3(calculoInt);
-                        break;
-                    default:
-                        UI.imprimirError4();
-                        break;
-                }
+        boolean key= true;
+        while(key == true){ 
+            UI.imprimirBienvenida();
+            UI.imprimirMenu();
+            int opcion = UI.leerOpcion();
+            switch(opcion){
+                case 1:
+                    UI.MenuEstudiantes(carlos, david, sofia);
+                    int opcion2=UI.leerOpcion();
+                    switch(opcion2){
+                        case 1:
+                            UI.imprimirEstudiante1(carlos);
+                            break;
+                        case 2:
+                            UI.imprimirEstudiante2(david);
+                            break;
+                        case 3:
+                            UI.imprimirEstudiante3(sofia);
+                            break;
+                        default:
+                            UI.imprimirError2();
+                            break;
+                    }
+                    break;
+                case 2:
+                    UI.MenuProfesores(Ligia,Sandra,Mauricio);
+                    int opcion3= UI.leerOpcion();
+                    switch(opcion3){
+                        case 1:
+                            UI.imprimirProfesor1(Ligia);
+                            break;
+                        case 2:
+                            UI.imprimirProfesor2(Sandra);
+                            break;
+                        case 3:
+                            UI.imprimirProfesor2(Mauricio);
+                            break;
+                        default:
+                            UI.imprimirError3();
+                            break;
+                    }
+                    break;
+                case 3:
+                    UI.MenuAsignaturas(calculoDif,algebraLin,calculoInt);
+                    int opcion4= UI.leerOpcion();
+                    switch(opcion4){
+                        case 1:
+                            UI.imprimirAsignatura1(calculoDif);
+                            break;
+                        case 2:
+                            UI.imprimirAsignatura2(algebraLin);
+                            break;
+                        case 3:
+                            UI.imprimirAsignatura3(calculoInt);
+                            break;
+                        default:
+                            UI.imprimirError4();
+                            break;
+                    }
+                    break;
                        
-            case 4: 
-                UI.menuCalificaciones(carlos, david, sofia);
-                int opcionE = UI.leerOpcion();
-                switch(opcionE){
-                    case 1:
-                        UI.mostrarCalificaciones(carlos, carlos.getNota());
-                        break;
-                    case 2:
-                        UI.mostrarCalificaciones(david, david.getNota());
-                        break;
-                    case 3:
-                        UI.mostrarCalificaciones(sofia, sofia.getNota());
-                        break;
-                }
-                break;
-            case 5:
-                System.out.println("Digite su ID: ");
-                long usuario = UI.leerOpcionL();
-                while (true){
-                    if(usuario == 1014972381){
-                        UI.login(carlos, carlos.getAsistente());
-                        break;
-                    }else if(usuario == 102634582l){
-                        UI.login(david, david.getAsistente());
-                        break;
-                    }else if(usuario == 1016345612l){
-                        UI.login(sofia, sofia.getAsistente());
-                        break;
-                    }else{
-                        while(ID.contains(usuario) == false){
-                            System.out.println("ID equivocado, escríbalo unevamente: ");
-                            usuario = UI.leerOpcionL();
+                case 4: 
+                    UI.menuCalificaciones(carlos, david, sofia);
+                    int opcionE = UI.leerOpcion();
+                    switch(opcionE){
+                        case 1:
+                            UI.mostrarCalificaciones(carlos, carlos.getNota());
+                            break;
+                        case 2:
+                            UI.mostrarCalificaciones(david, david.getNota());
+                            break;
+                        case 3:
+                            UI.mostrarCalificaciones(sofia, sofia.getNota());
+                            break;
+                    }
+                    break;
+                case 5:
+                    System.out.println("Digite su ID: ");
+                    long usuario = UI.leerOpcionL();
+                    while (true){
+                        if(usuario == 1014972381){
+                            UI.login(carlos, carlos.getAsistente());
+                            break;
+                        }else if(usuario == 102634582l){
+                            UI.login(david, david.getAsistente());
+                            break;
+                        }else if(usuario == 1016345612l){
+                            UI.login(sofia, sofia.getAsistente());
+                            break;
+                        }else{
+                            while(ID.contains(usuario) == false){
+                                System.out.println("ID equivocado, escríbalo unevamente: ");
+                                usuario = UI.leerOpcionL();
+                            } 
                         }
                     }
-                }
-                break;   
-        } 
+                    break;   
+                case 0:
+                    System.out.println("Desea salir?\nPresione 0");
+                    int opcion5 = UI.leerOpcion();
+                    if (opcion5 == 0 ){
+                        key= false;
+                        System.out.println("Vuelva pronto");
+                    }
+                                        
+                break;    
+                    
+            } 
+        }
     }
 }
