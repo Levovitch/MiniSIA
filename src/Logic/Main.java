@@ -165,7 +165,7 @@ public class Main {
                 System.out.println("Digite su ID: ");
                 long usuario = UI.leerOpcionL();
                 while (true){
-                    if(usuario == 101497238){
+                    if(usuario == 1014972381){
                         UI.login(carlos, carlos.getAsistente());
                         break;
                     }else if(usuario == 102634582l){
