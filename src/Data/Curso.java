@@ -40,9 +40,10 @@ public Curso(int numero, int creditos) {
     this.nombre = null;
     this.creditos = creditos;
 }
+
 @Override
 public String toString() {
-return "CURSO: \n " + "\n Numero = " + this.getnumero() + "\n Nombre = " + this.getnombre() + "\n Creditos = " + this.getcreditos();
+return "\n------ASIGNATURA: ------\n " + "Numero = " + this.getnumero() + "\n Nombre = " + this.getnombre() + "\n Creditos = " + this.getcreditos()+"\n";
 }
 
 
