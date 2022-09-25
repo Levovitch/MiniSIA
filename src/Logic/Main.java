@@ -19,8 +19,8 @@ public class Main {
         Date MauricioFN = new Date(17, 01, 1981);
         //CURSOS
         Curso calculoDif = new Curso(1000009, "Cálculo Diferencial", 4);
-        Curso algebraLin = new Curso(1000003, "Álgebra Lineal", 4);
-        Curso calculoInt = new Curso(1000003, "Calculko Integral", 4);
+        Curso algebraLin = new Curso(1000004, "Álgebra Lineal", 4);
+        Curso calculoInt = new Curso(1000003, "Cálculo Integral", 4);
         //ESTUDIANTES
         Estudiante carlos = new Estudiante(101497238l, "Carlos", "García", carlosFN);
         Estudiante david = new Estudiante(102634582l, "David", "Díaz", davidFN);
@@ -128,7 +128,24 @@ public class Main {
                         UI.imprimirError3();
                         break;
                 }
-                    
+            case 3:
+                UI.MenuAsignaturas(calculoDif,algebraLin,calculoInt)
+                int opcion4= UI.leerOpcion();
+                switch(opcion4){
+                    case 1:
+                        UI.imprimirAsignatura1(calculoDif);
+                        break;
+                    case 2:
+                        UI.imprimirAsignatura2(algebraLin);
+                        break;
+                    case 3:
+                        UI.imprimirAsignatura3(calculoInt);
+                        break;
+                    default:
+                        UI.imprimirError4();
+                        break;
+                }
+                       
             case 4: 
                 UI.menuCalificaciones(carlos, david, sofia);
                 int opcionE = UI.leerOpcion();

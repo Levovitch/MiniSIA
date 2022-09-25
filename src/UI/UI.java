@@ -170,5 +170,25 @@ public class UI {
         profesor.setSalario(salario);
         
     }
+    //CURSO
+    public static void MenuAsignaturas(Curso asignatura1, Curso asignatura2, Curso asignatura3){
+        System.out.println("LISTA DE ASIGNATURAS ");
+        System.out.println("1. " + asignatura1.getNombre()+"\n 2." + 
+        asignatura2.getNombre()+"\n 3." + asignatura3.getNombre());
     }
     
+    public static void imprimirAsignatura1(Curso asignatura1){
+        System.out.println(asignatura1);
+    }
+    public static void imprimirAsignatura2(Curso asignatura2){
+        System.out.println(asignatura2);
+    }
+    public static void imprimirAsignatura3(Curso asignatura3){
+        System.out.println(asignatura3);
+    }
+    public static void imprimirError4(){
+        System.out.println("Opcion no valida");
+
+    }
+
+}
