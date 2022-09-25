@@ -11,7 +11,7 @@ public class UI {
     }
         
     public static void imprimirMenu(){
-        System.out.print("1. Ver estudiantes \n2. Ver profesores \n3. Ver asignaturas \n4. Ver calificaciones \n5. Calificación docente \nPor favor marque la opción que desee: ");
+        System.out.print("1. Ver estudiantes \n2. Ver profesores \n3. Ver asignaturas \n4. Ver calificaciones \n5. Calificación docente \n0. Salir del MiniSia \nPor favor marque la opción que desee: ");
     }   
     public static int leerOpcion(){
         Scanner lector = new Scanner(System.in);
@@ -28,6 +28,12 @@ public class UI {
         double opcion = lector.nextDouble();
         return opcion;
     }
+    public static String leerOpcionS(){
+        Scanner lector = new Scanner(System.in);
+        String opcion = lector.nextLine();
+        return opcion;
+    }
+
     //ESTUDIANTE
     public static void MenuEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
         System.out.println("LISTA DE ESTUDIANTES ");
@@ -172,13 +178,16 @@ public class UI {
     }
     //CURSO
     public static void MenuAsignaturas(Curso asignatura1, Curso asignatura2, Curso asignatura3){
-        System.out.println("LISTA DE ASIGNATURAS ");
+        System.out.println("\nLISTA DE ASIGNATURAS ");
         System.out.println("1. " + asignatura1.getnombre()+"\n2. " + 
         asignatura2.getnombre()+"\n3. " + asignatura3.getnombre());
     }
     
     public static void imprimirAsignatura1(Curso asignatura1){
         System.out.println(asignatura1);
+    }
+    public static void imprimirGrupo(Grupo grupo){
+        System.out.println(grupo);
     }
     public static void imprimirAsignatura2(Curso asignatura2){
         System.out.println(asignatura2);
@@ -188,7 +197,6 @@ public class UI {
     }
     public static void imprimirError4(){
         System.out.println("Opcion no valida");
-
     }
 
 }
