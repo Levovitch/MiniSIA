@@ -173,8 +173,8 @@ public class UI {
     //CURSO
     public static void MenuAsignaturas(Curso asignatura1, Curso asignatura2, Curso asignatura3){
         System.out.println("LISTA DE ASIGNATURAS ");
-        System.out.println("1. " + asignatura1.getnombre()+"\n 2." + 
-        asignatura2.getnombre()+"\n 3." + asignatura3.getnombre());
+        System.out.println("1. " + asignatura1.getnombre()+"\n2. " + 
+        asignatura2.getnombre()+"\n3. " + asignatura3.getnombre());
     }
     
     public static void imprimirAsignatura1(Curso asignatura1){
