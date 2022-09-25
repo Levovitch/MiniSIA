@@ -112,7 +112,7 @@ public class Main {
                         break;
                 }
             case 2:
-                UI.MenuProfesores(Ligia,Sandra,Mauricio)
+                UI.MenuProfesores(Ligia,Sandra,Mauricio);
                 int opcion3= UI.leerOpcion();
                 switch(opcion3){
                     case 1:
@@ -129,7 +129,7 @@ public class Main {
                         break;
                 }
             case 3:
-                UI.MenuAsignaturas(calculoDif,algebraLin,calculoInt)
+                UI.MenuAsignaturas(calculoDif,algebraLin,calculoInt);
                 int opcion4= UI.leerOpcion();
                 switch(opcion4){
                     case 1:
