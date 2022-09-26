@@ -73,17 +73,9 @@ public class UI {
     }
    
     public static void imprimirProfesor1(Profesor profesor1){
-        System.out.println(profesor1);
+        System.out.println(profesor1.getNombre()+" "+profesor1.getApellido()+","+profesor1.getFechaDeNacimiento()+" "+profesor1.getEstudiantes().getNombre()+""+profesor1.getEstudiantes().getApellido());
     }
-    public static void imprimirProfesor2(Profesor profesor2){
-        System.out.println(profesor2);
-    }
-    public static void imprimirProfesor3(Profesor profesor3){
-        System.out.println(profesor3);
-    }
-     public static void imprimirError3(){
-        System.out.println("Opcion no valida");
-    }
+   
     //CALIFICACIÓN
     
     public static void menuCalificaciones(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
