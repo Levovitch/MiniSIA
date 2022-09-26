@@ -107,9 +107,7 @@ public class UI {
         System.out.print("1. " + estudiante1.getNombre() + " " +  estudiante1.getApellido() + " \nPromedio PAPA: " + String.format("%.2f", estudiante1.getPAPA()) + "\nCalificaciones: ");
        
         for(int i = 0; i <= calificaciones.size()-1; i++){
-           System.out.print(calificaciones.get(i).getNota() + " ");
-            if (i == calificaciones.size()-1){
-                System.out.println("\n");
+           string += calificaciones.get(i) + " ";
         }
         System.out.println(string);
         }
@@ -181,18 +179,12 @@ public class UI {
     //CURSO
     public static void MenuAsignaturas(Curso asignatura1, Curso asignatura2, Curso asignatura3){
         System.out.println("\nLISTA DE ASIGNATURAS ");
+        System.out.println("Escoga la asignatura de la cual necesite informacion");
         System.out.println("1. " + asignatura1.getnombre()+"\n2. " + 
         asignatura2.getnombre()+"\n3. " + asignatura3.getnombre());
     }
-    
-    public static void imprimirAsignatura1(Curso asignatura1){
-        System.out.println(asignatura1);
-    }
-    public static void imprimirAsignatura2(Curso asignatura2){
-        System.out.println(asignatura2);
-    }
-    public static void imprimirAsignatura3(Curso asignatura3){
-        System.out.println(asignatura3);
+    public static void imprimirAsignatura(Curso asignatura){
+        System.out.println(asignatura);
     }
     public static void imprimirError4(){
         System.out.println("Opcion no valida");
