@@ -107,7 +107,9 @@ public class UI {
         System.out.print("1. " + estudiante1.getNombre() + " " +  estudiante1.getApellido() + " \nPromedio PAPA: " + String.format("%.2f", estudiante1.getPAPA()) + "\nCalificaciones: ");
        
         for(int i = 0; i <= calificaciones.size()-1; i++){
-           string += calificaciones.get(i) + " ";
+           System.out.print(calificaciones.get(i).getNota() + " ");
+            if (i == calificaciones.size()-1){
+                System.out.println("\n");
         }
         System.out.println(string);
         }
