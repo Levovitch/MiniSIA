@@ -2,6 +2,7 @@
 package Data;
 import java.util.Date;
 import java.util.List;
+import UI.*;
 
 
 public class Estudiante {
