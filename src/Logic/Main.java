@@ -138,13 +138,13 @@ public class Main {
                         int opcion4= UI.leerOpcion();
                         switch(opcion4){
                             case 1:
-                                UI.imprimirAsignatura1(calculoDif);
+                                UI.imprimirAsignatura(calculoDif);
                                 break;
                             case 2:
-                                UI.imprimirAsignatura2(algebraLin);
+                                UI.imprimirAsignatura(algebraLin);
                                 break;
                             case 3:
-                                UI.imprimirAsignatura3(calculoInt);
+                                UI.imprimirAsignatura(calculoInt);
                                 break;
                             default:
                                 UI.imprimirError4();
@@ -189,9 +189,9 @@ public class Main {
                         }
                         break;   
                     case 0:
-                        System.out.println("Desea salir?\nPresione 0");
-                        int opcion5 = UI.leerOpcion();
-                        if (opcion5 == 0 ){
+                        System.out.println("Desea salir?\nPresiones SI si desea salir, si no es el caso presione NO");
+                        String opcion5 = UI.leerOpcionS();
+                        if (opcion5.equals("SI") ){
                             key= false;
                             System.out.println("Vuelva pronto");
                         } 
