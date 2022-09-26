@@ -123,13 +123,13 @@ public class Main {
                                 UI.imprimirProfesor1(Ligia);
                                 break;
                             case 2:
-                                UI.imprimirProfesor2(Sandra);
+                                UI.imprimirProfesor1(Sandra);
                                 break;
                             case 3:
-                                UI.imprimirProfesor2(Mauricio);
+                                UI.imprimirProfesor1(Mauricio);
                                 break;
                             default:
-                                UI.imprimirError3();
+                                System.out.println("Error");
                                 break;
                         }
                         break;
