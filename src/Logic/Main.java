@@ -189,7 +189,7 @@ public class Main {
                         }
                         break;   
                     case 0:
-                        System.out.println("Desea salir?\nPresiones SI si desea salir, si no es el caso presione NO");
+                        System.out.println("\nDesea salir?\nPresiones SI si desea salir, si no es el caso presione NO");
                         String opcion5 = UI.leerOpcionS();
                         if (opcion5.equals("SI") ){
                             key= false;
