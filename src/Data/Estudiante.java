@@ -102,6 +102,8 @@ public void setrecibopago(Finanzas getrecibopago){
     }
 @Override
 public String toString() {
-        return "ESTUDIANTE:/n" + "ID = " + this.getID() + "/n Nombre = " + this.getNombre() + "/n Apellido = " + this.getApellido() + "/n PAPA = " + this.getPAPA() + "/n Fecha de Nacimiento = " + this.getFechaNacimiento() + "/n Nombre Tutor = " + this.getNombretutor() + "/n Asistente = " + this.getAsistente() + "/n Materias = " + this.getMaterias() + "/n Nota = " + this.getNota() + "/n Recibo de pago = " + this.getrecibopago();
+        return "ESTUDIANTE:/n" + "ID = " + this.getID() + "/nNombre = " + this.getNombre() + "/nApellido = " + this.getApellido() + "/nPAPA = " + this.getPAPA() + "/nFecha de Nacimiento = " + this.getFechaNacimiento().toString() + "/n Nombre Tutor = " + this.getNombretutor().getNombre() + " " + this.getNombretutor().getApellido()
+                + "/nAsistente = \n" + UI.mostrarGrupo(this.getAsistente())
+                + "/n Nota = " + this.getNota() + "/n Recibo de pago = " + this.getrecibopago();
     }
 }

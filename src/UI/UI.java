@@ -54,6 +54,16 @@ public class UI {
     public static void imprimirError2(){
         System.out.println("Opcion no valida");
     }
+     public static String mostrarGrupo(List<Grupo> grupo){
+        String string = "";
+        for(int i = 0; i <= grupo.size()-1; i++){
+            string += "\n" + grupo.get(i).getmateria().getnombre() + " por " + grupo.get(i).getProfesor().getNombre() + " " + grupo.get(i).getProfesor().getApellido();
+            if (i == grupo.size()-1){
+                System.out.println("\n");
+            }
+        }
+        return string;
+    }
     //PROFESOR
      public static void MenuProfesores(Profesor profesor1, Profesor profesor2, Profesor profesor3){
         System.out.println("LISTA DE PROFESORES ");
