@@ -11,12 +11,12 @@ public class Main {
     
     public static void main(String[] args) {
         //Fechas de Nacimiento
-        Date carlosFN = new Date(13, 04, 2001);
-        Date davidFN = new Date(1, 03, 2004);
-        Date sofiaFN = new Date(26, 06, 2003);
-        Date LigiaFN = new Date(2, 12, 1967);
-        Date SandraFN = new Date(7, 11, 1989);
-        Date MauricioFN = new Date(17, 01, 1981);
+        Date carlosFN = new Date(100, 4, 1);
+        Date davidFN = new Date(104, 6, 9);
+        Date sofiaFN = new Date(105, 8, 2);
+        Date LigiaFN = new Date(78, 11, 7);
+        Date SandraFN = new Date(88, 5, 14);
+        Date MauricioFN = new Date(61,7,26);
         //CURSOS
         Curso calculoDif = new Curso(1000009, "Cálculo Diferencial", 4);
         Curso algebraLin = new Curso(1000004, "Álgebra Lineal", 4);
