@@ -43,16 +43,15 @@ public class UI {
     }
     
     public static void imprimirEstudiante1(Estudiante estudiante1){
-        System.out.println(estudiante1);
-    }
-    public static void imprimirEstudiante2(Estudiante estudiante2){
-        System.out.println(estudiante2);
-    }
-    public static void imprimirEstudiante3(Estudiante estudiante3){
-        System.out.println(estudiante3);
-    }
-    public static void imprimirError2(){
-        System.out.println("Opcion no valida");
+        System.out.println("Nombre:"+estudiante1.getNombre()+" "+estudiante1.getApellido());
+        System.out.println("ID:"+estudiante1.getID());
+        System.out.println("PAPA:"+estudiante1.getPAPA());
+        System.out.println("Fecha de nacimiento:"+estudiante1.getFechaNacimiento());
+        System.out.println("Tutor:"+estudiante1.getNombretutor().getNombre()+" "+estudiante1.getNombretutor().getApellido());
+        System.out.println("Asistente en:"+estudiante1.getAsistente().getClass());
+        System.out.println("Materias:"+estudiante1.getMaterias().get(1));
+        System.out.println("Nota:"+estudiante1.getNota().getClass());
+        System.out.println("Recibo de pago:"+estudiante1.getrecibopago().getRecibos());
     }
      public static String mostrarGrupo(List<Grupo> grupo){
         String string = "";
@@ -65,7 +64,7 @@ public class UI {
         return string;
     }
     //PROFESOR
-     public static void MenuProfesores(Profesor profesor1, Profesor profesor2, Profesor profesor3){
+    public static void MenuProfesores(Profesor profesor1, Profesor profesor2, Profesor profesor3){
         System.out.println("LISTA DE PROFESORES ");
         System.out.println("1. " + profesor1.getNombre() + profesor1.getApellido() + "\n2. " + 
                 profesor2.getNombre() +  profesor2.getApellido() +  
@@ -73,7 +72,13 @@ public class UI {
     }
    
     public static void imprimirProfesor1(Profesor profesor1){
-        System.out.println(profesor1.getNombre()+" "+profesor1.getApellido()+","+profesor1.getFechaDeNacimiento()+" "+profesor1.getEstudiantes().getNombre()+""+profesor1.getEstudiantes().getApellido());
+     System.out.println("Nombre:"+profesor1.getNombre()+" "+profesor1.getApellido());
+     System.out.println("ID:"+profesor1.getID());
+     System.out.println("Fecha de nacimiento:"+profesor1.getFechaDeNacimiento());
+     System.out.println("Tutoreado:"+profesor1.getEstudiantes().getNombre()+" "+profesor1.getEstudiantes().getApellido());
+     System.out.println("Grupos que dicta:"+profesor1.getGruposQueDicta().getnumero());
+     System.out.println("Salario:"+profesor1.getSalario().getPagos());
+     System.out.println("Calificación:"+profesor1.getCalificacion().getnota());
     }
    
     //CALIFICACIÓN
