@@ -105,13 +105,13 @@ public class Main {
                                 UI.imprimirEstudiante1(carlos);
                                 break;
                             case 2:
-                                UI.imprimirEstudiante2(david);
+                                UI.imprimirEstudiante1(david);
                                 break;
                             case 3:
-                                UI.imprimirEstudiante3(sofia);
+                                UI.imprimirEstudiante1(sofia);
                                 break;
                             default:
-                                UI.imprimirError2();
+                                System.out.println("Error");;
                                 break;
                         }
                         break;
@@ -191,7 +191,7 @@ public class Main {
                     case 0:
                         System.out.println("\nDesea salir?\nPresiones SI si desea salir, si no es el caso presione NO");
                         String opcion5 = UI.leerOpcionS();
-                        if (opcion5.equals("SI") ){
+                        if (opcion5.equals("SI")||opcion5.equals("Si")||opcion5.equals("si")){
                             key= false;
                             System.out.println("Vuelva pronto");
                         } 
