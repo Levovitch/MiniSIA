@@ -44,7 +44,7 @@ public Curso(int numero, int creditos) {
 
 @Override
 public String toString() {
-return "\n------ASIGNATURA:------\n" + "Nombre: " + this.getnombre() + "\n Numero: " + this.getnumero() + "\n Creditos: " + this.getcreditos()+"\n";
+return "\n------ASIGNATURA:------\n" + "Nombre: " + this.getnombre() + "\nNumero: " + this.getnumero() + "\nCreditos: " + this.getcreditos()+"\n";
 }
 
 
