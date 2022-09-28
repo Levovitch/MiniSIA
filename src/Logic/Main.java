@@ -111,7 +111,7 @@ public class Main {
                                 UI.imprimirEstudiante1(sofia);
                                 break;
                             default:
-                                System.out.println("Error");;
+                                UI.imprimirError4();
                                 break;
                         }
                         break;
@@ -171,33 +171,32 @@ public class Main {
                         System.out.println("Digite su ID: ");
                         long usuario = UI.leerOpcionL();
                         while (true){
-                            if(usuario == 1014972381){
+                            if(usuario == 101497238){
                                 UI.login(carlos, carlos.getAsistente());
                                 break;
-                            }else if(usuario == 102634582l){
+                            }else if(usuario == 102634582){
                                 UI.login(david, david.getAsistente());
                                 break;
-                            }else if(usuario == 1016345612l){
+                            }else if(usuario == 1016345612){
                                 UI.login(sofia, sofia.getAsistente());
                                 break;
                             }else{
                                 while(ID.contains(usuario) == false){
                                     System.out.println("ID equivocado, escríbalo unevamente: ");
                                     usuario = UI.leerOpcionL();
-                                } 
+                                }
                             }
                         }
                         break;   
                     case 0:
                         System.out.println("\nDesea salir?\nPresiones SI si desea salir, si no es el caso presione NO");
                         String opcion5 = UI.leerOpcionS();
-                        if (opcion5.equals("SI")||opcion5.equals("Si")||opcion5.equals("si")){
+                        if (opcion5.equals("SI") ){
                             key= false;
                             System.out.println("Vuelva pronto");
                         } 
 
-                    break;    
-                        
+                    break;         
                 } 
                 } 
                 catch (Exception e) {

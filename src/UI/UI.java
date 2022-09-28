@@ -37,48 +37,70 @@ public class UI {
     //ESTUDIANTE
     public static void MenuEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
         System.out.println("LISTA DE ESTUDIANTES ");
-        System.out.println("1. " + estudiante1.getNombre() + estudiante1.getApellido() + "\n 2. " + 
-                estudiante2.getNombre() +  estudiante2.getApellido() +  
-                "\n 3. " + estudiante3.getNombre() + estudiante3.getApellido() + "\nSeleccione el número del estudiante: ");
+        System.out.println("1. " + estudiante1.getNombre() + " " + estudiante1.getApellido() + "\n2. " + 
+                estudiante2.getNombre() + " " + estudiante2.getApellido() +  
+                "\n3. " + estudiante3.getNombre() + " " + estudiante3.getApellido() + "\nSeleccione el número del estudiante: ");
     }
     
     public static void imprimirEstudiante1(Estudiante estudiante1){
-        System.out.println("Nombre:"+estudiante1.getNombre()+" "+estudiante1.getApellido());
+        System.out.println("Nombre:"+estudiante1.getNombre()+" " +estudiante1.getApellido());
+        System.out.println("PAPA: " + String.format("%.2f", estudiante1.getPAPA()));
         System.out.println("ID:"+estudiante1.getID());
-        System.out.println("PAPA:"+estudiante1.getPAPA());
-        System.out.println("Fecha de nacimiento:"+estudiante1.getFechaNacimiento());
+        System.out.println("Fecha de nacimiento:"+estudiante1.getFechaNacimiento().getDay()+ "/"+estudiante1.getFechaNacimiento().getMonth() + "/" + (estudiante1.getFechaNacimiento().getYear()+1900));
         System.out.println("Tutor:"+estudiante1.getNombretutor().getNombre()+" "+estudiante1.getNombretutor().getApellido());
-        System.out.println("Asistente en:"+estudiante1.getAsistente().getClass());
-        System.out.println("Materias:"+estudiante1.getMaterias().get(1));
-        System.out.println("Nota:"+estudiante1.getNota().getClass());
-        System.out.println("Recibo de pago:"+estudiante1.getrecibopago().getRecibos());
+        System.out.println("Asistente en:" + UI.mostrarGrupo(estudiante1.getAsistente()));
+        System.out.println("Materias:\n" + UI.mostrarAsignatura(estudiante1.getMaterias()));
+        System.out.println("Recibo de pago:"+estudiante1.getrecibopago().getRecibos() + " pesos");
+        System.out.print("Calificaciones: ");
+        for(int i = 0; i <= estudiante1.getNota().size()-1; i++){
+            System.out.print(estudiante1.getNota().get(i).getNota() + " ");
+            if (i == estudiante1.getNota().size()-1){
+                System.out.print("\n\n");
+            }
+        }
     }
      public static String mostrarGrupo(List<Grupo> grupo){
         String string = "";
         for(int i = 0; i <= grupo.size()-1; i++){
             string += "\n" + grupo.get(i).getmateria().getnombre() + " por " + grupo.get(i).getProfesor().getNombre() + " " + grupo.get(i).getProfesor().getApellido();
             if (i == grupo.size()-1){
-                System.out.println("\n");
+                System.out.print("\n");
             }
         }
         return string;
     }
+     public static String mostrarAsignatura(List<Curso> curso){
+        String string = "";
+        for(int i = 0; i <= curso.size()-1; i++){
+            string += "----- " + curso.get(i).getnombre() + " -----\n" + "Nombre: " + curso.get(i).getnombre() + "\nCreditos: " + curso.get(i).getcreditos() + "\nNumero: " + curso.get(i).getnumero() + "\n";
+            if (i == curso.size()-1){
+                System.out.print("\n");
+            }
+        }
+        return string;
+    }
+     
     //PROFESOR
     public static void MenuProfesores(Profesor profesor1, Profesor profesor2, Profesor profesor3){
         System.out.println("LISTA DE PROFESORES ");
-        System.out.println("1. " + profesor1.getNombre() + profesor1.getApellido() + "\n2. " + 
-                profesor2.getNombre() +  profesor2.getApellido() +  
-                "\n3. " + profesor3.getNombre() + profesor3.getApellido() + "\nSeleccione el número del profesor: ");
+        System.out.println("1. " + profesor1.getNombre() + " "+ profesor1.getApellido() + "\n2. " + 
+                profesor2.getNombre() + " " +  profesor2.getApellido() +  
+                "\n3. " + profesor3.getNombre() + " " + profesor3.getApellido() + "\nSeleccione el número del profesor: ");
     }
    
     public static void imprimirProfesor1(Profesor profesor1){
      System.out.println("Nombre:"+profesor1.getNombre()+" "+profesor1.getApellido());
      System.out.println("ID:"+profesor1.getID());
-     System.out.println("Fecha de nacimiento:"+profesor1.getFechaDeNacimiento());
-     System.out.println("Tutoreado:"+profesor1.getEstudiantes().getNombre()+" "+profesor1.getEstudiantes().getApellido());
+     System.out.println("Fecha de nacimiento:"+profesor1.getFechaDeNacimiento().getDay()+ "/"+profesor1.getFechaDeNacimiento().getMonth() + "/" + (profesor1.getFechaDeNacimiento().getYear()+1900));
+     System.out.println("Tutoreado:"+profesor1.getEstudiantes().getNombre()+ " "+ profesor1.getEstudiantes().getApellido());
      System.out.println("Grupos que dicta:"+profesor1.getGruposQueDicta().getnumero());
-     System.out.println("Salario:"+profesor1.getSalario().getPagos());
-     System.out.println("Calificación:"+profesor1.getCalificacion().getnota());
+     System.out.println("Salario:"+ profesor1.getSalario().getPagos() + " pesos");
+     System.out.print("Calificación:");
+     if(profesor1.getCalificacion() == null){
+         System.out.println("El profesor no tiene califiación");
+     }else{
+         System.out.println(profesor1.getCalificacion().getnota());
+     }
     }
    
     //CALIFICACIÓN
@@ -110,13 +132,15 @@ public class UI {
         estudiante1.setPAPA(calificacionT.getNota());
     }
     public static void mostrarCalificaciones(Estudiante estudiante1, List<Calificacion> calificaciones){
-        String string = "";
         System.out.print("1. " + estudiante1.getNombre() + " " +  estudiante1.getApellido() + " \nPromedio PAPA: " + String.format("%.2f", estudiante1.getPAPA()) + "\nCalificaciones: ");
        
         for(int i = 0; i <= calificaciones.size()-1; i++){
-           string += calificaciones.get(i) + " ";
+            System.out.print(calificaciones.get(i).getNota() + " ");
+            if (i == calificaciones.size()-1){
+                System.out.print("\n");
+            }
         }
-        System.out.println(string);
+        
         }
     
     //EVALUACIÓN DOCENTE
